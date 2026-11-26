@@ -9,6 +9,8 @@
 <meta property="og:title" content="Okay Open Mics: Music Open Mic Nights in Southern California">
 <meta property="og:description" content="Recurring open mics with music slots across Southern California, by night and city, with when each was last checked.">
 <meta property="og:url" content="https://mics.okayguitarplayer.com/"><meta property="og:type" content="website">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="32x32">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mics.okayguitarplayer.com/#site","name":"Okay Open Mics","url":"https://mics.okayguitarplayer.com/","inLanguage":"en-US","publisher":{"@id":"https://okayguitarplayer.com/#org"}},{"@type":"Organization","@id":"https://okayguitarplayer.com/#org","name":"okay guitar player","url":"https://okayguitarplayer.com/","sameAs":["https://www.threads.com/@okayguitarplayer","https://www.instagram.com/okayguitarplayer/"]}]}</script>
 <!--ANALYTICS--><script async src="https://www.googletagmanager.com/gtag/js?id=G-0T2VZV0BQT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0T2VZV0BQT');</script><!--/ANALYTICS-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +50,7 @@ select.chip { appearance: auto; }
 main { flex: 1; display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); min-height: 0; }
 #list { overflow-y: auto; border-right: 3px solid var(--rule); min-width: 0; }
 #count { padding: 8px 16px; font-size: 12px; color: var(--soft); border-bottom: 1px dashed var(--line); }
-#mapwrap { position: relative; min-height: 280px; }
+#mapwrap { position: relative; min-height: 280px; background: #eceae4; }
 #map { position: absolute; inset: 0; }
 .item { padding: 12px 14px 12px max(16px, env(safe-area-inset-left)); border-bottom: 1px dashed var(--line); display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 10px; }
 .item.sel { background: #fff7c7; }
@@ -149,7 +151,7 @@ footer { border-top: 3px solid var(--rule); padding: 8px max(16px, env(safe-area
 </footer>
 
 <script type="module">
-import * as maplibregl from "https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs";
+let maplibregl = null, map = null;  // the map loads after the list renders (Lighthouse: map blocked ~4 s)
 
 const DAYS = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
 const DAY = { MO: ["Mon", "M", "#0072B2", "#ffffff"], TU: ["Tue", "T", "#D55E00", "#ffffff"], WE: ["Wed", "W", "#009E73", "#ffffff"],
@@ -201,7 +203,7 @@ function badge(p) {
   if (p.tier === "checked") return `<span class="tag tier-checked">Checked ${esc(shortDate(p.checked_date))}</span>`;
   if (p.tier === "may_have_stopped") return `<span class="tag tier-may_have_stopped">May have stopped</span>`;
   if (p.tier === "players") return `<span class="tag">Players confirmed</span>`;
-  return `<span class="tag tier-unconfirmed">Not checked yet</span>${p.last_seen ? ` <span class="meta">listed as of ${esc(shortDate(p.last_seen))}</span>` : ""}`;
+  return `<span class="tag tier-unconfirmed">Not checked yet</span>${p.last_seen ? ` <span class="meta">listed as of ${esc(shortDate(p.last_seen) + (p.last_seen.slice(0, 4) !== String(from.getFullYear()) ? ", " + p.last_seen.slice(0, 4) : ""))}</span>` : ""}`;
 }
 // One clean line: "Weekly, Saturdays · 6:00 PM · Free", or "Times vary. Check the source."
 function line(p) {
@@ -259,9 +261,7 @@ function renderList(feats) {
   }
 }
 
-// --- Map -----------------------------------------------------------------------------------------------------
-const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/positron", center: [-117.6, 33.95], zoom: 7.4, attributionControl: { compact: true } });
-map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+// --- Map (loaded after the list) ----------------------------------------------------------------------------
 const DAY_COLOR = ["match", ["get", "_day"], ...Object.entries(DAY).flatMap(([k, v]) => [k, v[2]]), "#9a9a95"];
 const LETTER_COLOR = ["match", ["get", "_day"], ...Object.entries(DAY).flatMap(([k, v]) => [k, v[3]]), "#111111"];
 
@@ -271,7 +271,8 @@ function select(id, fly) {
   state.sel = id;
   const f = all.find((x) => x.properties.id === id); if (!f) return;
   document.querySelectorAll(".item.sel").forEach((n) => n.classList.remove("sel"));
-  const row = $("row-" + id); if (row) { row.classList.add("sel"); if (!fly) row.scrollIntoView({ block: "nearest" }); }
+  const row = $("row-" + id); if (row) { row.classList.add("sel"); if (!fly || !map) row.scrollIntoView({ block: "nearest" }); }
+  if (!map) return;  // the map applies state.sel when it finishes loading
   if (fly) map.flyTo({ center: f.geometry.coordinates, zoom: Math.max(map.getZoom(), 13), duration: 600 });
   const p = f.properties;
   new maplibregl.Popup({ offset: 14, maxWidth: "290px" }).setLngLat(f.geometry.coordinates).setHTML(
@@ -284,47 +285,60 @@ function select(id, fly) {
 function render() {
   const feats = filtered();
   renderList(feats);
-  const src = map.getSource("mics"); if (src) src.setData(toGeo(feats));
+  const src = map && map.getSource("mics"); if (src) src.setData(toGeo(feats));
 }
+function fitTo(feats, pad, maxZoom) { if (!map || !feats.length) return; const b = new maplibregl.LngLatBounds(); feats.forEach((f) => b.extend(f.geometry.coordinates)); map.fitBounds(b, { padding: pad, maxZoom, duration: 0 }); }
 
-map.on("load", async () => {
-  const [mics, region] = await Promise.all([fetch("open-mics.geojson", { cache: "no-cache" }).then((r) => r.json()), fetch("region.geojson").then((r) => r.json()).catch(() => null)]);
+let region = null;
+async function boot() {
+  const mics = await fetch("open-mics.geojson", { cache: "no-cache" }).then((r) => r.json());
   all = mics.features;
   for (const f of all) { const p = f.properties; p._day = dayOf(p); p._next = nextDate(p.schedule_rule, p.listed_date, from); }
   if (mics.generated) $("checked").textContent = `List updated ${mics.generated}.`;
   const counties = [...new Set(all.map((f) => f.properties.county).filter(Boolean))].sort();
   for (const c of counties) $("county").insertAdjacentHTML("beforeend", `<option>${esc(c)}</option>`);
-  if (region) {
-    map.addSource("region", { type: "geojson", data: region });
-    map.addLayer({ id: "region-line", type: "line", source: "region", paint: { "line-color": "#111", "line-width": 1.6, "line-dasharray": [3, 2], "line-opacity": 0.8 } });
-  }
-  map.addSource("mics", { type: "geojson", data: toGeo(all), cluster: true, clusterMaxZoom: 11, clusterRadius: 42 });
-  map.addLayer({ id: "clusters", type: "circle", source: "mics", filter: ["has", "point_count"], paint: { "circle-color": "#111", "circle-radius": ["step", ["get", "point_count"], 14, 10, 18, 40, 23], "circle-stroke-color": "#fbfbf8", "circle-stroke-width": 2 } });
-  map.addLayer({ id: "cluster-count", type: "symbol", source: "mics", filter: ["has", "point_count"], layout: { "text-field": ["get", "point_count_abbreviated"], "text-font": ["Noto Sans Bold"], "text-size": 12 }, paint: { "text-color": "#fbfbf8" } });
-  map.addLayer({ id: "mic", type: "circle", source: "mics", filter: ["!", ["has", "point_count"]], paint: {
-    "circle-radius": 11,
-    "circle-color": ["match", ["get", "tier"], "unconfirmed", "#ffffff", "may_have_stopped", "#d9d9d9", DAY_COLOR],
-    "circle-stroke-color": ["match", ["get", "tier"], "unconfirmed", DAY_COLOR, "may_have_stopped", "#8a8a85", "#111111"],
-    "circle-stroke-width": ["match", ["get", "tier"], "checked", 3.5, "players", 2, "unconfirmed", 3, 1.5],
-    "circle-opacity": ["match", ["get", "tier"], "may_have_stopped", 0.7, 1] } });
-  map.addLayer({ id: "mic-letter", type: "symbol", source: "mics", filter: ["!", ["has", "point_count"]], layout: { "text-field": ["get", "_letter"], "text-font": ["Noto Sans Bold"], "text-size": 11, "text-allow-overlap": true },
-    paint: { "text-color": ["match", ["get", "tier"], "unconfirmed", "#111111", "may_have_stopped", "#55554f", LETTER_COLOR] } });
-
-  map.on("click", "clusters", async (e) => {
-    const f = map.queryRenderedFeatures(e.point, { layers: ["clusters"] })[0];
-    const z = await map.getSource("mics").getClusterExpansionZoom(f.properties.cluster_id);
-    map.easeTo({ center: f.geometry.coordinates, zoom: z });
-  });
-  map.on("click", "mic", (e) => select(e.features[0].properties.id, false));
-  for (const l of ["clusters", "mic"]) { map.on("mouseenter", l, () => (map.getCanvas().style.cursor = "pointer")); map.on("mouseleave", l, () => (map.getCanvas().style.cursor = "")); }
-  if (all.length) { const b = new maplibregl.LngLatBounds(); all.forEach((f) => b.extend(f.geometry.coordinates)); map.fitBounds(b, { padding: 40, maxZoom: 11, duration: 0 }); }
   if (params.get("county")) { state.county = params.get("county"); $("county").value = state.county; }
   if (params.get("city")) state.city = params.get("city");
   buildDays(); render();
-  if (state.city || state.county) { const fs = filtered(); if (fs.length) { const b = new maplibregl.LngLatBounds(); fs.forEach((f) => b.extend(f.geometry.coordinates)); map.fitBounds(b, { padding: 60, maxZoom: state.city ? 13 : 12, duration: 0 }); } }
   if (params.get("mic")) select(params.get("mic"), true);
   if (params.get("report")) openForm(params.get("report") === "new" ? null : params.get("report"));
-});
+  const later = window.requestIdleCallback || ((fn) => setTimeout(fn, 200));
+  later(loadMap, { timeout: 1500 });
+}
+
+async function loadMap() {
+  maplibregl = await import("https://unpkg.com/maplibre-gl@6.16.0/dist/maplibre-gl.mjs");
+  region = await fetch("region.geojson").then((r) => r.json()).catch(() => null);
+  map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/positron", center: [-117.6, 33.95], zoom: 7.4, attributionControl: { compact: true } });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+  map.on("load", () => {
+    if (region) {
+      map.addSource("region", { type: "geojson", data: region });
+      map.addLayer({ id: "region-line", type: "line", source: "region", paint: { "line-color": "#111", "line-width": 1.6, "line-dasharray": [3, 2], "line-opacity": 0.8 } });
+    }
+    map.addSource("mics", { type: "geojson", data: toGeo(filtered()), cluster: true, clusterMaxZoom: 11, clusterRadius: 42 });
+    map.addLayer({ id: "clusters", type: "circle", source: "mics", filter: ["has", "point_count"], paint: { "circle-color": "#111", "circle-radius": ["step", ["get", "point_count"], 14, 10, 18, 40, 23], "circle-stroke-color": "#fbfbf8", "circle-stroke-width": 2 } });
+    map.addLayer({ id: "cluster-count", type: "symbol", source: "mics", filter: ["has", "point_count"], layout: { "text-field": ["get", "point_count_abbreviated"], "text-font": ["Noto Sans Bold"], "text-size": 12 }, paint: { "text-color": "#fbfbf8" } });
+    map.addLayer({ id: "mic", type: "circle", source: "mics", filter: ["!", ["has", "point_count"]], paint: {
+      "circle-radius": 11,
+      "circle-color": ["match", ["get", "tier"], "unconfirmed", "#ffffff", "may_have_stopped", "#d9d9d9", DAY_COLOR],
+      "circle-stroke-color": ["match", ["get", "tier"], "unconfirmed", DAY_COLOR, "may_have_stopped", "#8a8a85", "#111111"],
+      "circle-stroke-width": ["match", ["get", "tier"], "checked", 3.5, "players", 2, "unconfirmed", 3, 1.5],
+      "circle-opacity": ["match", ["get", "tier"], "may_have_stopped", 0.7, 1] } });
+    map.addLayer({ id: "mic-letter", type: "symbol", source: "mics", filter: ["!", ["has", "point_count"]], layout: { "text-field": ["get", "_letter"], "text-font": ["Noto Sans Bold"], "text-size": 11, "text-allow-overlap": true },
+      paint: { "text-color": ["match", ["get", "tier"], "unconfirmed", "#111111", "may_have_stopped", "#55554f", LETTER_COLOR] } });
+    map.on("click", "clusters", async (e) => {
+      const f = map.queryRenderedFeatures(e.point, { layers: ["clusters"] })[0];
+      const z = await map.getSource("mics").getClusterExpansionZoom(f.properties.cluster_id);
+      map.easeTo({ center: f.geometry.coordinates, zoom: z });
+    });
+    map.on("click", "mic", (e) => select(e.features[0].properties.id, false));
+    for (const l of ["clusters", "mic"]) { map.on("mouseenter", l, () => (map.getCanvas().style.cursor = "pointer")); map.on("mouseleave", l, () => (map.getCanvas().style.cursor = "")); }
+    if (state.city || state.county) fitTo(filtered(), 60, state.city ? 13 : 12); else fitTo(all, 40, 11);
+    if (state.here) map.flyTo({ center: state.here, zoom: 10 });
+    if (state.sel) select(state.sel, true);
+  });
+}
 
 // --- Controls ------------------------------------------------------------------------------------------------
 function buildDays() {
@@ -345,7 +359,7 @@ $("nearMe").addEventListener("click", (e) => {
   navigator.geolocation.getCurrentPosition((pos) => {
     state.here = [pos.coords.longitude, pos.coords.latitude]; btn.textContent = "Near me"; btn.setAttribute("aria-pressed", "true");
     for (const f of all) f.properties._km = km(state.here, f.geometry.coordinates);
-    map.flyTo({ center: state.here, zoom: 10 }); render();
+    if (map) map.flyTo({ center: state.here, zoom: 10 }); render();
   }, () => { btn.textContent = "Near me"; alertNote("Location wasn't shared, so the list stays soonest first. Pick a county instead."); }, { maximumAge: 600000, timeout: 10000 });
 });
 function alertNote(msg) { $("count").textContent = msg; }
@@ -410,6 +424,15 @@ function openForm(id) {
 function closeForm() { $("panel").hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); else $("submitBtn").focus(); }
 $("submitBtn").addEventListener("click", () => openForm(null));
 document.addEventListener("click", (e) => { const a = e.target.closest("a[data-report]"); if (a) { e.preventDefault(); openForm(a.dataset.report); } });
+// GA4: which links send players onward (mark these as key events in GA4 admin)
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a[href]"); if (!a || !window.gtag) return;
+  const h = a.href, ev = /google\.com\/maps/.test(h) ? "directions_click" : /kit\.com/.test(h) ? "email_signup_click"
+    : /supporters\/pricing/.test(h) ? "support_click" : /okayguitarplayer\.com\/?(\?|$)/.test(h) ? "shop_click"
+    : (a.textContent.trim() === "Source" || a.closest(".maplibregl-popup-content")) && !/okayguitarplayer|report=/.test(h) ? "source_click" : null;
+  if (ev) gtag("event", ev, { link_url: h });
+});
+boot();
 document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("panel").hidden) closeForm(); });
 </script>
 </body>
