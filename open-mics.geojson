@@ -1,6 +1,6 @@
 {
  "type": "FeatureCollection",
- "generated": "2026-11-07",
+ "generated": "2026-11-25",
  "region": "Southern California",
  "license": "CC BY 4.0, Okay Open Mics",
  "about": "Recurring open mics with music slots. Times change: check the source before you go.",
@@ -38,6 +38,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2014-09-29",
     "times_vary": false,
     "sources": [
      {
@@ -81,6 +82,7 @@
     "website": "https://www.facebook.com/backtothegrind/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2024-12-02",
     "times_vary": false,
     "sources": [
      {
@@ -134,6 +136,7 @@
     "website": null,
     "tier": "checked",
     "checked_date": "2026-11-06",
+    "last_seen": "2026-11-06",
     "times_vary": false,
     "sources": [
      {
@@ -192,6 +195,7 @@
     "website": "http://www.proofbar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -235,6 +239,7 @@
     "website": "http://www.tnofullerton.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -278,6 +283,7 @@
     "website": "https://www.downeybrewingcompany.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -321,6 +327,7 @@
     "website": "http://pauhausgallery.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -364,6 +371,7 @@
     "website": "http://www.barneysbeanery.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -407,6 +415,7 @@
     "website": "https://www.partakecollective.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -450,6 +459,7 @@
     "website": "http://www.lestats.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -493,6 +503,7 @@
     "website": "http://www.atspacebar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -536,6 +547,7 @@
     "website": "http://www.wrigleycoffee.org/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -579,6 +591,7 @@
     "website": "https://www.yelp.com/biz/iptche-los-angeles",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -622,6 +635,7 @@
     "website": "http://www.dreamcenter.org/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -665,6 +679,7 @@
     "website": "http://happyrabbitbarandlounge.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -708,6 +723,7 @@
     "website": "https://anaheim.houseofblues.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -756,6 +772,7 @@
     "website": "https://www.noblealeworks.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -799,6 +816,7 @@
     "website": "https://www.brewheim.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -842,6 +860,7 @@
     "website": "https://disneyland.disney.go.com/entertainment/disney-california-adventure/frozen-live-at-hyperion/?",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -885,6 +904,7 @@
     "website": "http://anaheim.net/library",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -928,6 +948,7 @@
     "website": "http://www.radiantbeer.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -971,6 +992,7 @@
     "website": "http://anaheim.net/903/Library-Locations",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1014,6 +1036,7 @@
     "website": "http://www.brewery-x.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1038,7 +1061,7 @@
     "name": "Open mic at Republic of Pie",
     "venue": "Republic of Pie",
     "address": "11118 Magnolia Blvd Hollywood CA",
-    "city": "N Hollywood",
+    "city": "North Hollywood",
     "county": "Los Angeles",
     "day": "MO",
     "schedule_text": "Weekly, Mondays",
@@ -1057,6 +1080,7 @@
     "website": "http://www.republicofpie.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1100,6 +1124,7 @@
     "website": "http://www.blackrabbitrose.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1143,6 +1168,7 @@
     "website": "http://www.blipsy-dotcom.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1186,6 +1212,7 @@
     "website": "http://www.storiesla.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1229,6 +1256,7 @@
     "website": "http://www.grandstarjazzclub.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1272,6 +1300,7 @@
     "website": "https://yelp.com/biz/the-lexington-bar-los-angeles",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1315,6 +1344,7 @@
     "website": "http://lodgeroomhlp.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1358,6 +1388,7 @@
     "website": "http://www.themintla.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1401,6 +1432,7 @@
     "website": "http://akbarsilverlake.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1444,6 +1476,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1487,6 +1520,7 @@
     "website": "https://yelp.com/biz/crawfords-los-angeles-2",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1530,6 +1564,7 @@
     "website": "https://theecho.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1573,6 +1608,7 @@
     "website": "https://www.facebook.com/Footsies/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1597,7 +1633,7 @@
     "name": "Open mic at Universal Bar and Grill",
     "venue": "Universal Bar and Grill",
     "address": "4093 Lankershim Blvd Hollywood CA",
-    "city": "N Hollywood",
+    "city": "North Hollywood",
     "county": "Los Angeles",
     "day": "TU",
     "schedule_text": "Weekly, Tuesdays",
@@ -1616,6 +1652,7 @@
     "website": "http://www.universalbarandgrill.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1659,6 +1696,7 @@
     "website": "http://www.peabodysrocks.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1702,6 +1740,7 @@
     "website": "http://durtynellyscostamesa.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1745,6 +1784,7 @@
     "website": "https://www.meadiocritymead.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1788,6 +1828,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1831,6 +1872,7 @@
     "website": "http://www.thebarreltavern.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1874,6 +1916,7 @@
     "website": "http://theicehouse.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1898,7 +1941,7 @@
     "name": "Open mic at Kulak's Woodshed",
     "venue": "Kulak's Woodshed",
     "address": "5230 1/2 Laurel Canyon Blvd Hollywood CA",
-    "city": "N Hollywood",
+    "city": "North Hollywood",
     "county": "Los Angeles",
     "day": "MO",
     "schedule_text": "Weekly, Mondays",
@@ -1917,6 +1960,7 @@
     "website": "http://kulakswoodshed.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1960,6 +2004,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -1984,7 +2029,7 @@
     "name": "Open mic at North Hollywood Diner",
     "venue": "North Hollywood Diner",
     "address": "11329 Magnolia Blvd Hollywood CA",
-    "city": "N Hollywood",
+    "city": "North Hollywood",
     "county": "Los Angeles",
     "day": "FR",
     "schedule_text": "Weekly, Fridays",
@@ -2003,6 +2048,7 @@
     "website": "http://northhollywooddiner.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2027,7 +2073,7 @@
     "name": "Open mic at North Hollywood Diner",
     "venue": "North Hollywood Diner",
     "address": "11329 Magnolia Blvd Hollywood CA",
-    "city": "N Hollywood",
+    "city": "North Hollywood",
     "county": "Los Angeles",
     "day": "SA",
     "schedule_text": "Weekly, Saturdays",
@@ -2046,6 +2092,7 @@
     "website": "http://northhollywooddiner.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2089,6 +2136,7 @@
     "website": "http://www.pourhouseoceanside.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2132,6 +2180,7 @@
     "website": "http://www.theworldstage.org/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2175,6 +2224,7 @@
     "website": "http://gaslamplongbeach.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2218,6 +2268,7 @@
     "website": "http://santamonica.harvelles.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2261,6 +2312,7 @@
     "website": "http://kaffeemeister.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2304,53 +2356,11 @@
     "website": "http://unurban.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
       "url": "https://badslava.com/details.php?id=2531",
-      "date": null,
-      "label": "badslava.com"
-     }
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -118.00166,
-     33.65742
-    ]
-   },
-   "properties": {
-    "id": "badslava-27570",
-    "name": "Open mic at 2nd Floor",
-    "venue": "2nd Floor",
-    "address": "126 Main St Huntington Beach CA",
-    "city": "Huntington Beach",
-    "county": "Orange",
-    "day": "MO",
-    "schedule_text": "Weekly, Mondays",
-    "schedule_rule": "weekly:MO",
-    "listed_date": "2026-11-09",
-    "signup_time": null,
-    "start_time": "7:00 PM",
-    "end_time": null,
-    "format": null,
-    "slot": null,
-    "backline": null,
-    "ages": "unknown",
-    "cost": "Free",
-    "instagram": "https://www.instagram.com/2nd_floor_hb/",
-    "facebook": null,
-    "website": "http://2ndfloorhb.com/",
-    "tier": "unconfirmed",
-    "checked_date": null,
-    "times_vary": false,
-    "sources": [
-     {
-      "url": "https://badslava.com/details.php?id=27570",
       "date": null,
       "label": "badslava.com"
      }
@@ -2390,6 +2400,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2433,6 +2444,7 @@
     "website": "http://www.alexsbar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2476,6 +2488,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2519,6 +2532,7 @@
     "website": "http://www.thestachebar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2562,6 +2576,7 @@
     "website": "http://www.queseralb.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2605,6 +2620,7 @@
     "website": "http://www.theordinarie.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2648,53 +2664,11 @@
     "website": "http://casademariarestaurant.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
       "url": "https://badslava.com/details.php?id=28200",
-      "date": null,
-      "label": "badslava.com"
-     }
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -117.91932,
-     33.6359
-    ]
-   },
-   "properties": {
-    "id": "badslava-30483",
-    "name": "Open mic at The Harp Inn",
-    "venue": "The Harp Inn",
-    "address": "130 E 17th St Costa Mesa CA",
-    "city": "Costa Mesa",
-    "county": "Orange",
-    "day": "MO",
-    "schedule_text": "Weekly, Mondays",
-    "schedule_rule": "weekly:MO",
-    "listed_date": "2026-11-09",
-    "signup_time": null,
-    "start_time": "8:00 PM",
-    "end_time": null,
-    "format": null,
-    "slot": null,
-    "backline": null,
-    "ages": "unknown",
-    "cost": "Free",
-    "instagram": "https://www.instagram.com/theharpinn/",
-    "facebook": null,
-    "website": "http://www.harpinn.com/",
-    "tier": "unconfirmed",
-    "checked_date": null,
-    "times_vary": false,
-    "sources": [
-     {
-      "url": "https://badslava.com/details.php?id=30483",
       "date": null,
       "label": "badslava.com"
      }
@@ -2734,6 +2708,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2777,6 +2752,7 @@
     "website": "https://www.ocmusicdance.org/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2820,6 +2796,7 @@
     "website": "https://www.culverhotel.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2863,6 +2840,7 @@
     "website": "http://www.bellyup.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2906,6 +2884,7 @@
     "website": "https://www.foxriverside.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2949,6 +2928,7 @@
     "website": "http://www.thevirgil.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -2992,6 +2972,7 @@
     "website": "https://www.centerstreetanaheim.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3035,6 +3016,7 @@
     "website": "http://www.theblinddonkey.com/pasadena",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3078,6 +3060,7 @@
     "website": "http://www.hotelcafe.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3121,6 +3104,7 @@
     "website": "http://churchillspub.us/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3164,6 +3148,7 @@
     "website": "http://www.thederwolfpasadena.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3207,6 +3192,7 @@
     "website": "http://thelighthousecafe.net/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3250,6 +3236,7 @@
     "website": "http://www.culturebrewingco.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3293,6 +3280,7 @@
     "website": "http://www.theregalbar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3336,6 +3324,7 @@
     "website": "http://www.tripsantamonica.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3379,6 +3368,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3422,6 +3412,7 @@
     "website": "http://www.bogartscoffee.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3465,6 +3456,7 @@
     "website": "https://localunion101.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3508,6 +3500,7 @@
     "website": "http://thecrestsportsbarandgrill.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3551,6 +3544,7 @@
     "website": "https://spaghettini.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3594,6 +3588,7 @@
     "website": "https://www.lakealicetradingco.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3642,6 +3637,7 @@
     "website": "http://www.thefifthoc.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3685,6 +3681,7 @@
     "website": "http://www.santeecoffeecorner.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3728,6 +3725,7 @@
     "website": "http://www.thewoodmanla.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3771,6 +3769,7 @@
     "website": "http://www.santeecoffeecorner.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3814,6 +3813,7 @@
     "website": "https://saintrocke.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3857,6 +3857,7 @@
     "website": "https://rivierasupperclub.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3900,6 +3901,7 @@
     "website": "https://www.casagaminocentury.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3943,6 +3945,7 @@
     "website": "http://manhattanbar91910.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -3986,6 +3989,7 @@
     "website": "http://theoakstavern.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4029,6 +4033,7 @@
     "website": "http://1019west.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4072,6 +4077,7 @@
     "website": "https://www.thehangoutrestaurant.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4115,6 +4121,7 @@
     "website": "http://www.thevilladelsol.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4158,6 +4165,7 @@
     "website": "http://www.saloonencinitas.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4201,6 +4209,7 @@
     "website": "http://www.thesavoyentertainmentcenter.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4244,6 +4253,7 @@
     "website": "http://www.theexhibitionroom.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4287,6 +4297,7 @@
     "website": "http://www.thecinemabar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4330,6 +4341,7 @@
     "website": "http://improv.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4373,6 +4385,7 @@
     "website": "https://www.labellas.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4416,6 +4429,7 @@
     "website": "http://www.redcarbrewery.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4459,6 +4473,7 @@
     "website": "http://madero1899.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4507,6 +4522,7 @@
     "website": "https://www.thelibrarycoffee.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4550,6 +4566,7 @@
     "website": "https://theepicloungedowney.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4593,6 +4610,7 @@
     "website": "http://www.thestachebar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4636,6 +4654,7 @@
     "website": "http://manhattanbar91910.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4679,6 +4698,7 @@
     "website": "http://www.thecomedyandmagicclub.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4722,6 +4742,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4765,6 +4786,7 @@
     "website": "http://greenwaycourttheatre.org/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4808,6 +4830,7 @@
     "website": "https://grandvision.org/events-tickets/grand-annex/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4851,6 +4874,7 @@
     "website": "http://industrycafejazz.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4894,6 +4918,7 @@
     "website": "http://www.dipiazzas.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -4937,53 +4962,11 @@
     "website": "https://www.thelibrarycoffee.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
       "url": "https://badslava.com/details.php?id=4315",
-      "date": null,
-      "label": "badslava.com"
-     }
-    ]
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -117.88695,
-     33.67743
-    ]
-   },
-   "properties": {
-    "id": "badslava-43401",
-    "name": "Open mic at East Borough",
-    "venue": "East Borough",
-    "address": "2937 Bristol St B102 Costa Mesa CA",
-    "city": "Costa Mesa",
-    "county": "Orange",
-    "day": "FR",
-    "schedule_text": "Weekly, Fridays",
-    "schedule_rule": "weekly:FR",
-    "listed_date": "2026-11-13",
-    "signup_time": null,
-    "start_time": "6:00 PM",
-    "end_time": null,
-    "format": null,
-    "slot": null,
-    "backline": null,
-    "ages": "unknown",
-    "cost": "Free",
-    "instagram": "https://www.instagram.com/dencafeoc/",
-    "facebook": null,
-    "website": "http://www.east-borough.com/",
-    "tier": "unconfirmed",
-    "checked_date": null,
-    "times_vary": false,
-    "sources": [
-     {
-      "url": "https://badslava.com/details.php?id=43401",
       "date": null,
       "label": "badslava.com"
      }
@@ -5023,6 +5006,7 @@
     "website": "http://thefable.la/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5066,6 +5050,7 @@
     "website": "http://www.lyrichyperion.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5109,6 +5094,7 @@
     "website": "http://www.1ststreetbar.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5152,6 +5138,7 @@
     "website": "http://aztecbrewery.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5195,6 +5182,7 @@
     "website": "http://www.birdrockcoffee.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5238,6 +5226,7 @@
     "website": "http://www.thekettleon.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5281,6 +5270,7 @@
     "website": "https://www.queenbeessd.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5324,6 +5314,7 @@
     "website": "https://rox.bar/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5367,6 +5358,7 @@
     "website": "https://www.oletapasbarlbc.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5398,9 +5390,9 @@
     "schedule_rule": "weekly:TU",
     "listed_date": "2026-11-10",
     "signup_time": null,
-    "start_time": "9:00 PM",
-    "end_time": null,
-    "format": null,
+    "start_time": "8:00 PM",
+    "end_time": "10:00 PM",
+    "format": "music",
     "slot": null,
     "backline": null,
     "ages": "unknown",
@@ -5408,10 +5400,16 @@
     "instagram": "https://www.instagram.com/mysticwaterkavabar/",
     "facebook": null,
     "website": "https://www.mysticwaterkavabar.com/",
-    "tier": "unconfirmed",
-    "checked_date": null,
+    "tier": "checked",
+    "checked_date": "2026-11-25",
+    "last_seen": "2026-11-25",
     "times_vary": false,
     "sources": [
+     {
+      "url": "https://www.mysticwaterkavabar.com/events",
+      "date": "2026-11-25",
+      "label": "mysticwaterkavabar.com"
+     },
      {
       "url": "https://badslava.com/details.php?id=7382",
       "date": null,
@@ -5453,6 +5451,7 @@
     "website": "http://thesilverlakelounge.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5496,6 +5495,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5539,6 +5539,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5582,6 +5583,7 @@
     "website": "http://www.avantgardenoc.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5625,6 +5627,7 @@
     "website": "http://www.confidentialcoffee.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5668,6 +5671,7 @@
     "website": "https://www.roscoeschickenandwaffles.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-11-07",
     "times_vary": false,
     "sources": [
      {
@@ -5711,6 +5715,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": null,
     "times_vary": true,
     "sources": [
      {
@@ -5759,6 +5764,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": null,
     "times_vary": false,
     "sources": [
      {
@@ -5802,6 +5808,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2026-06-19",
     "times_vary": true,
     "sources": [
      {
@@ -5865,6 +5872,7 @@
     "website": "https://www.coronaca.gov/government/departments/library",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": null,
     "times_vary": false,
     "sources": [
      {
@@ -5913,6 +5921,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2014-09-29",
     "times_vary": false,
     "sources": [
      {
@@ -5956,6 +5965,7 @@
     "website": "http://www.dba256.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": null,
     "times_vary": false,
     "sources": [
      {
@@ -5999,6 +6009,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": null,
     "times_vary": true,
     "sources": [
      {
@@ -6047,6 +6058,7 @@
     "website": null,
     "tier": "checked",
     "checked_date": "2026-10-25",
+    "last_seen": "2026-10-25",
     "times_vary": false,
     "sources": [
      {
@@ -6095,6 +6107,7 @@
     "website": "http://www.ibrewworks.com/",
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": "2020-03-10",
     "times_vary": false,
     "sources": [
      {
@@ -6148,6 +6161,7 @@
     "website": null,
     "tier": "checked",
     "checked_date": "2026-11-06",
+    "last_seen": "2026-11-06",
     "times_vary": false,
     "sources": [
      {
@@ -6191,6 +6205,7 @@
     "website": null,
     "tier": "checked",
     "checked_date": "2026-11-06",
+    "last_seen": "2026-11-06",
     "times_vary": false,
     "sources": [
      {
@@ -6239,6 +6254,7 @@
     "website": "http://www.rockefellasbar.com/",
     "tier": "may_have_stopped",
     "checked_date": null,
+    "last_seen": null,
     "times_vary": false,
     "sources": [
      {
@@ -6287,6 +6303,7 @@
     "website": null,
     "tier": "checked",
     "checked_date": "2026-10-30",
+    "last_seen": "2026-10-30",
     "times_vary": false,
     "sources": [
      {
@@ -6330,6 +6347,7 @@
     "website": null,
     "tier": "unconfirmed",
     "checked_date": null,
+    "last_seen": null,
     "times_vary": false,
     "sources": [
      {
@@ -6373,6 +6391,7 @@
     "website": null,
     "tier": "may_have_stopped",
     "checked_date": null,
+    "last_seen": "2026-06-26",
     "times_vary": false,
     "sources": [
      {

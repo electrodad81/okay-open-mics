@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Okay Open Mics: Southern California</title>
-<meta name="description" content="Recurring open mics with music slots across Southern California, checked by a person and kept fresh by players. A community list from okayguitarplayer.">
+<title>Okay Open Mics: Music Open Mic Nights in Southern California</title>
+<meta name="description" content="Recurring open mics with music slots across Southern California, checked by a person and kept fresh by players. A community list from okay guitar player.">
+<link rel="canonical" href="https://mics.okayguitarplayer.com/">
+<meta property="og:title" content="Okay Open Mics: Music Open Mic Nights in Southern California">
+<meta property="og:description" content="Recurring open mics with music slots across Southern California, by night and city, with when each was last checked.">
+<meta property="og:url" content="https://mics.okayguitarplayer.com/"><meta property="og:type" content="website">
+<!--ANALYTICS--><script async src="https://www.googletagmanager.com/gtag/js?id=G-0T2VZV0BQT"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-0T2VZV0BQT');</script><!--/ANALYTICS-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Archivo+Narrow:wght@500;700&display=swap">
@@ -76,6 +81,11 @@ main { flex: 1; display: grid; grid-template-columns: minmax(0, 420px) minmax(0,
 #panel h2 { margin: 0 0 8px; font: 700 20px var(--mono); }
 #panel ul { margin: 6px 0 10px; padding-left: 18px; }
 
+#panel label { display: block; font: 700 12px var(--narrow); text-transform: uppercase; letter-spacing: .05em; margin: 10px 0 3px; }
+#panel input, #panel select, #panel textarea { width: 100%; font: 14px var(--mono); border: 1.5px solid var(--ink); background: #fff; padding: 6px 8px; }
+#panel textarea { min-height: 80px; }
+#panel .hp { position: absolute; left: -9999px; }
+#panel .done { background: #fff7c7; border-left: 3px solid var(--ink); padding: 8px 10px; }
 footer { border-top: 3px solid var(--rule); padding: 8px max(16px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); font-size: 12px; display: flex; flex-wrap: wrap; gap: 4px 18px; }
 .maplibregl-popup-content { font: 13px/1.45 var(--mono); border: 2px solid var(--ink); border-radius: 0; padding: 10px 12px; }
 .maplibregl-popup-content b { font-size: 14px; }
@@ -94,9 +104,9 @@ footer { border-top: 3px solid var(--rule); padding: 8px max(16px, env(safe-area
     <h1>Okay <mark>open mics</mark></h1>
     <p class="sub">Open mics with music slots across Southern California. Solid pins have a venue or host post from the last 60 days. Hollow pins are leads. Check the source before you go. <span id="checked"></span></p>
     <div class="actions">
-      <button class="btn" type="button" id="submitBtn">Add a mic: DM @okayguitarplayer</button>
+      <button class="btn" type="button" id="submitBtn">Suggest a mic</button>
       <a class="btn" id="email" href="https://okay-guitar-player.kit.com/b95bfe4607?utm_source=open-mic-map&amp;utm_medium=map&amp;utm_campaign=open-mic-list&amp;utm_content=email-link" target="_blank" rel="noopener">Get the list by email each month</a>
-      <a class="btn solid" id="support" href="https://okayguitarplayer-shop.fourthwall.com/supporters/pricing?utm_source=open-mic-map&amp;utm_medium=web&amp;utm_campaign=open-mic-map&amp;utm_content=open-mic-map" target="_blank" rel="noopener">Help keep this map going</a>
+      <a class="btn solid" id="support" href="https://okayguitarplayer.com/supporters/pricing?utm_source=open-mic-map&amp;utm_medium=web&amp;utm_campaign=open-mic-map&amp;utm_content=open-mic-map" target="_blank" rel="noopener">Help keep this map going</a>
     </div>
   </div>
   <div class="filters" role="group" aria-label="Filters">
@@ -132,8 +142,9 @@ footer { border-top: 3px solid var(--rule); padding: 8px max(16px, env(safe-area
 </main>
 <div id="panel" hidden role="dialog" aria-modal="false" aria-labelledby="panelTitle"></div>
 <footer>
-  <span>A community list by @okayguitarplayer on <a href="https://www.threads.com/@okayguitarplayer" target="_blank" rel="noopener">Threads</a> and <a href="https://www.instagram.com/okayguitarplayer/" target="_blank" rel="noopener">Instagram</a>. Times change: check the source before you go.</span>
+  <span>A community list by <a href="https://okayguitarplayer.com/?utm_source=open-mic-map&amp;utm_medium=web&amp;utm_campaign=open-mic-map&amp;utm_content=map-footer">okay guitar player</a> (shirts for the rest of us who play) and @okayguitarplayer on <a href="https://www.threads.com/@okayguitarplayer" target="_blank" rel="noopener">Threads</a> and <a href="https://www.instagram.com/okayguitarplayer/" target="_blank" rel="noopener">Instagram</a>. Times change: check the source before you go.</span>
   <span>Listings: Okay Open Mics, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Directory leads from <a href="https://badslava.com/">Badslava</a>.</span>
+  <!--AREAS--><span>Browse by area: <a href="/los-angeles-county/">Los Angeles County</a> · <a href="/san-diego-county/">San Diego County</a> · <a href="/orange-county/">Orange County</a> · <a href="/riverside-county/">Riverside County</a> · <a href="/san-bernardino-county/">San Bernardino County</a>. Cities: <a href="/los-angeles/">Los Angeles</a> · <a href="/long-beach/">Long Beach</a> · <a href="/riverside/">Riverside</a> · <a href="/anaheim/">Anaheim</a> · <a href="/north-hollywood/">North Hollywood</a> · <a href="/pasadena/">Pasadena</a> · <a href="/sherman-oaks/">Sherman Oaks</a> · <a href="/encinitas/">Encinitas</a> · <a href="/culver-city/">Culver City</a> · <a href="/santee/">Santee</a> · <a href="/inglewood/">Inglewood</a> · <a href="/pomona/">Pomona</a> · <a href="/fullerton/">Fullerton</a> · <a href="/downey/">Downey</a> · <a href="/san-diego/">San Diego</a> · <a href="/la-mesa/">La Mesa</a> · <a href="/santa-monica/">Santa Monica</a> · <a href="/hermosa-beach/">Hermosa Beach</a> · <a href="/seal-beach/">Seal Beach</a> · <a href="/chula-vista/">Chula Vista</a>.</span><!--/AREAS-->
   <span>Map: <a href="https://openfreemap.org/">OpenFreeMap</a> © <a href="https://openmaptiles.org/">OpenMapTiles</a>, data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</span>
 </footer>
 
@@ -181,7 +192,8 @@ function nextDate(rule, listed, from) {
 const dayOf = (p) => { if (DAY[p.day]) return p.day; const r = p.schedule_rule || ""; const s = r.includes(":") ? r.split(":")[1].slice(-2) : null; return DAY[s] ? s : null; };
 const daysAgo = (iso, from) => { if (!iso) return null; const [y, m, d] = iso.split("-").map(Number); return Math.round((from - new Date(y, m - 1, d)) / 864e5); };
 
-let all = [], state = { day: null, tonight: false, checked: false, allAges: false, county: "", here: null, sel: null };
+let all = [], state = { day: null, tonight: false, checked: false, allAges: false, county: "", city: "", here: null, sel: null };
+const params = new URLSearchParams(location.search);
 const from = todayPT();
 
 const shortDate = (iso) => { if (!iso) return ""; const [y, m, d] = iso.split("-").map(Number); return new Date(y, m - 1, d).toLocaleString("en-US", { month: "short", day: "numeric" }); };
@@ -189,7 +201,7 @@ function badge(p) {
   if (p.tier === "checked") return `<span class="tag tier-checked">Checked ${esc(shortDate(p.checked_date))}</span>`;
   if (p.tier === "may_have_stopped") return `<span class="tag tier-may_have_stopped">May have stopped</span>`;
   if (p.tier === "players") return `<span class="tag">Players confirmed</span>`;
-  return `<span class="tag tier-unconfirmed">Not checked yet</span>`;
+  return `<span class="tag tier-unconfirmed">Not checked yet</span>${p.last_seen ? ` <span class="meta">listed as of ${esc(shortDate(p.last_seen))}</span>` : ""}`;
 }
 // One clean line: "Weekly, Saturdays · 6:00 PM · Free", or "Times vary. Check the source."
 function line(p) {
@@ -207,6 +219,7 @@ function filtered() {
     if (state.checked && p.tier !== "checked") return false;
     if (state.allAges && p.ages !== "all") return false;
     if (state.county && p.county !== state.county) return false;
+    if (state.city && p.city !== state.city) return false;
     return true;
   });
 }
@@ -224,7 +237,8 @@ function renderList(feats) {
     const rank = { checked: 0, players: 1, unconfirmed: 2, may_have_stopped: 3 };
     return ad - bd || rank[a.properties.tier] - rank[b.properties.tier];
   });
-  $("count").textContent = `${feats.length} open mic${feats.length === 1 ? "" : "s"}${state.here ? ", nearest first" : ", soonest first"}`;
+  $("count").textContent = `${feats.length} open mic${feats.length === 1 ? "" : "s"}${state.city ? " in " + state.city : ""}${state.here ? ", nearest first" : ", soonest first"}`;
+  if (state.city) { const b = document.createElement("button"); b.className = "mini"; b.textContent = " Show all cities"; b.addEventListener("click", () => { state.city = ""; history.replaceState(null, "", location.pathname); render(); }); $("count").append(" ", b); }
   rows.innerHTML = sorted.length ? "" : '<p class="empty">No open mics match these filters.</p>';
   for (const f of sorted.slice(0, 400)) {
     const p = f.properties, d = DAY[p._day];
@@ -237,14 +251,10 @@ function renderList(feats) {
       <div class="meta">${esc(p.venue)}${p.city ? ", " + esc(p.city) : ""} · ${esc(p.county || "")}${state.here ? ` · ${(p._km * 0.621).toFixed(1)} mi` : ""}</div>
       <div class="meta">${esc(line(p))}</div>
       <div class="row">${badge(p)}${p.ages === "all" ? '<span class="tag">All ages</span>' : p.ages && p.ages !== "unknown" ? `<span class="tag">${esc(p.ages)}</span>` : ""}${p.format === "mixed" ? '<span class="tag">Mixed night</span>' : ""}</div>
-      <div class="row"><button class="mini" data-act="show">Show on map</button><button class="mini" data-act="still">Still running?</button><a class="mini" href="${directions(p)}" target="_blank" rel="noopener">Directions</a>${p.sources && p.sources[0] ? `<a class="mini" href="${esc(p.sources[0].url)}" target="_blank" rel="noopener">Source</a>` : ""}</div>
+      <div class="row"><button class="mini" data-act="show">Show on map</button><button class="mini" data-act="still">Report a problem</button><a class="mini" href="${directions(p)}" target="_blank" rel="noopener">Directions</a>${p.sources && p.sources[0] ? `<a class="mini" href="${esc(p.sources[0].url)}" target="_blank" rel="noopener">Source</a>` : ""}</div>
       <div class="still" hidden></div></div>`;
     el.querySelector('[data-act="show"]').addEventListener("click", () => select(p.id, true));
-    el.querySelector('[data-act="still"]').addEventListener("click", (e) => {
-      const box = el.querySelector(".still"); box.hidden = !box.hidden;
-      box.innerHTML = `<div class="note">Player check-ins are coming soon: one tap for "still running", "stopped" or "I played here". Until then, DM @okayguitarplayer on <a href="https://www.threads.com/@okayguitarplayer" target="_blank" rel="noopener">Threads</a> or <a href="https://www.instagram.com/okayguitarplayer/" target="_blank" rel="noopener">Instagram</a> and we'll update it.</div>`;
-      e.currentTarget.setAttribute("aria-expanded", String(!box.hidden));
-    });
+    el.querySelector('[data-act="still"]').addEventListener("click", () => openForm(p.id));
     rows.appendChild(el);
   }
 }
@@ -268,7 +278,7 @@ function select(id, fly) {
     `<b>${esc(p.name)}</b><br>${esc(p.venue)}${p.address ? "<br>" + esc(p.address) : ""}<br>${esc(line(p))}
      ${p.signup_time && !p.times_vary ? "<br>Sign-up " + esc(p.signup_time) : ""}${p.slot ? "<br>Slot: " + esc(p.slot) : ""}
      <br>${badge(p)}
-     <br>${sourcesHTML(p)}${p.instagram ? ` · <a href="${esc(p.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ""} · <a href="${directions(p)}" target="_blank" rel="noopener">Directions</a>`).addTo(map);
+     <br>${sourcesHTML(p)}${p.instagram ? ` · <a href="${esc(p.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ""} · <a href="${directions(p)}" target="_blank" rel="noopener">Directions</a> · <a href="?report=${encodeURIComponent(p.id)}" data-report="${esc(p.id)}">Report a problem</a>`).addTo(map);
 }
 
 function render() {
@@ -308,7 +318,12 @@ map.on("load", async () => {
   map.on("click", "mic", (e) => select(e.features[0].properties.id, false));
   for (const l of ["clusters", "mic"]) { map.on("mouseenter", l, () => (map.getCanvas().style.cursor = "pointer")); map.on("mouseleave", l, () => (map.getCanvas().style.cursor = "")); }
   if (all.length) { const b = new maplibregl.LngLatBounds(); all.forEach((f) => b.extend(f.geometry.coordinates)); map.fitBounds(b, { padding: 40, maxZoom: 11, duration: 0 }); }
+  if (params.get("county")) { state.county = params.get("county"); $("county").value = state.county; }
+  if (params.get("city")) state.city = params.get("city");
   buildDays(); render();
+  if (state.city || state.county) { const fs = filtered(); if (fs.length) { const b = new maplibregl.LngLatBounds(); fs.forEach((f) => b.extend(f.geometry.coordinates)); map.fitBounds(b, { padding: 60, maxZoom: state.city ? 13 : 12, duration: 0 }); } }
+  if (params.get("mic")) select(params.get("mic"), true);
+  if (params.get("report")) openForm(params.get("report") === "new" ? null : params.get("report"));
 });
 
 // --- Controls ------------------------------------------------------------------------------------------------
@@ -321,7 +336,7 @@ function buildDays() {
 for (const [id, key] of [["tonight", "tonight"], ["checkedOnly", "checked"], ["allAges", "allAges"]]) {
   $(id).addEventListener("click", (e) => { state[key] = !state[key]; e.currentTarget.setAttribute("aria-pressed", String(state[key])); render(); });
 }
-$("county").addEventListener("change", (e) => { state.county = e.target.value; render(); });
+$("county").addEventListener("change", (e) => { state.county = e.target.value; state.city = ""; render(); });
 $("nearMe").addEventListener("click", (e) => {
   const btn = e.currentTarget;
   if (state.here) { state.here = null; btn.setAttribute("aria-pressed", "false"); render(); return; }
@@ -335,17 +350,67 @@ $("nearMe").addEventListener("click", (e) => {
 });
 function alertNote(msg) { $("count").textContent = msg; }
 
-$("submitBtn").addEventListener("click", () => {
+// --- Suggest / report form -------------------------------------------------------------------------------------
+// Submissions go to Web3Forms, which emails them to okay guitar player. FORM_KEY is Web3Forms' public access key
+// (meant to sit in page HTML). Empty = no backend yet, so the form builds a message to send by DM.
+const FORM_ENDPOINT = "https://api.web3forms.com/submit";
+const FORM_KEY = "";
+let lastFocus = null;
+function openForm(id) {
+  lastFocus = document.activeElement;
+  const f = id ? all.find((x) => x.properties.id === id) : null, p = f ? f.properties : null;
   const panel = $("panel");
-  panel.innerHTML = `<h2 id="panelTitle">Submit an open mic</h2>
-    <p>DM <b>@okayguitarplayer</b> on <a href="https://www.threads.com/@okayguitarplayer" target="_blank" rel="noopener">Threads</a> or <a href="https://www.instagram.com/okayguitarplayer/" target="_blank" rel="noopener">Instagram</a> (same handle on both) with:</p>
-    <ul><li>Venue name and address</li><li>Night and how often (every week, 1st and 3rd Tuesday…)</li><li>Sign-up and start times, cost, all ages or 21+</li><li>A link where the venue or host posts about it</li></ul>
-    <p>Every new mic gets checked before it turns from hollow to checked. A player form is coming later.</p>
-    <button class="btn" type="button" id="closePanel">Close</button>`;
-  panel.hidden = false; $("closePanel").focus();
-  $("closePanel").addEventListener("click", () => { panel.hidden = true; $("submitBtn").focus(); });
-});
-document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("panel").hidden) { $("panel").hidden = true; $("submitBtn").focus(); } });
+  panel.innerHTML = `<h2 id="panelTitle">${p ? "Report a problem" : "Suggest an open mic"}</h2>
+    <form id="micForm">
+      ${p ? `<p><b>${esc(p.name)}</b><br>${esc(p.venue)}${p.address ? ", " + esc(p.address) : ""}<br>${esc(line(p))}</p>
+      <input type="hidden" name="mic_id" value="${esc(p.id)}"><input type="hidden" name="mic_name" value="${esc(p.name)}">
+      <label for="f-what">What's wrong?</label>
+      <select id="f-what" name="problem" required><option value="">Choose one</option><option>It stopped or the venue closed</option><option>Wrong night or time</option>
+        <option>It's not a music night (comedy, poetry, karaoke)</option><option>It's still running (I went recently)</option><option>Something else</option></select>`
+      : `<input type="hidden" name="problem" value="New mic">
+      <label for="f-venue">Venue name and city</label><input id="f-venue" name="venue" required autocomplete="off">
+      <label for="f-when">Night and how often</label><input id="f-when" name="when" placeholder="Every Tuesday, 1st and 3rd Sundays">`}
+      <label for="f-details">Details</label><textarea id="f-details" name="details" placeholder="${p ? "What you saw, and when" : "Sign-up and start times, cost, all ages or 21+"}"></textarea>
+      <label for="f-link">A link where the venue or host posts about it (optional)</label><input id="f-link" name="link" type="url" placeholder="https://">
+      <label for="f-contact">Your handle or email, if you'd like a reply (optional)</label><input id="f-contact" name="contact" autocomplete="off">
+      <input class="hp" name="website_hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="row"><button class="btn solid" type="submit">Send</button> <button class="btn" type="button" id="closePanel">Close</button></p>
+      <p class="meta">Every change gets checked before it shows on the map. Please don't post anyone's personal details.</p>
+    </form>`;
+  panel.hidden = false;
+  (panel.querySelector("select, input:not([type=hidden])") || $("closePanel")).focus();
+  $("closePanel").addEventListener("click", closeForm);
+  $("micForm").addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    const data = new FormData(ev.currentTarget);
+    if (data.get("website_hp")) return;
+    data.delete("website_hp"); data.set("page", location.href);
+    if (window.gtag) gtag("event", "map_form_submit", { form_type: data.get("mic_id") ? "report" : "suggest" });
+    const msg = [...data.entries()].filter(([k, v]) => v && k !== "page").map(([k, v]) => `${k.replace("_", " ")}: ${v}`).join("\n");
+    if (FORM_ENDPOINT && FORM_KEY) {
+      try {
+        data.set("access_key", FORM_KEY); data.set("from_name", "Okay Open Mics map");
+        data.set("subject", `Open mic ${data.get("mic_id") ? "report: " + (data.get("mic_name") || "") : "suggestion: " + (data.get("venue") || "")}`);
+        const res = await fetch(FORM_ENDPOINT, { method: "POST", body: new URLSearchParams(data), headers: { Accept: "application/json" } });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || out.success === false) throw new Error(res.status);
+        panel.querySelector("form").outerHTML = `<p class="done">Thanks. We'll check it and update the map.</p><button class="btn" type="button" id="closePanel">Close</button>`;
+        $("closePanel").addEventListener("click", closeForm); $("closePanel").focus();
+        return;
+      } catch (e) { /* fall through to the DM version */ }
+    }
+    panel.querySelector("form").outerHTML = `<p class="done">Almost there: copy this and send it as a DM to @okayguitarplayer on <a href="https://www.threads.com/@okayguitarplayer" target="_blank" rel="noopener">Threads</a> or <a href="https://www.instagram.com/okayguitarplayer/" target="_blank" rel="noopener">Instagram</a>.</p>
+      <textarea readonly id="f-msg" style="width:100%;min-height:120px;font:13px var(--mono)">${esc(msg)}</textarea>
+      <p class="row"><button class="btn solid" type="button" id="copyMsg">Copy message</button> <button class="btn" type="button" id="closePanel">Close</button></p>`;
+    $("closePanel").addEventListener("click", closeForm);
+    $("copyMsg").addEventListener("click", async (e) => { try { await navigator.clipboard.writeText($("f-msg").value); e.currentTarget.textContent = "Copied"; } catch { $("f-msg").select(); } });
+    $("copyMsg").focus();
+  });
+}
+function closeForm() { $("panel").hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); else $("submitBtn").focus(); }
+$("submitBtn").addEventListener("click", () => openForm(null));
+document.addEventListener("click", (e) => { const a = e.target.closest("a[data-report]"); if (a) { e.preventDefault(); openForm(a.dataset.report); } });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("panel").hidden) closeForm(); });
 </script>
 </body>
 </html>

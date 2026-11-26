@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mics.okayguitarplayer.com/sitemap.xml
