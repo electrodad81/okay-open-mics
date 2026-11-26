@@ -249,11 +249,11 @@ function renderList(feats) {
     el.className = "item" + (p.tier === "may_have_stopped" ? " stopped" : "") + (state.sel === p.id ? " sel" : "");
     el.id = "row-" + p.id;
     el.innerHTML = `<div class="when" style="border-color:${d ? d[2] : "var(--ink)"}"><b style="background:${d ? d[2] : "var(--ink)"};color:${d ? d[3] : "#fff"}">${d ? d[0] : "?"}</b>${n ? `<span>${n.date.getDate()}</span><small>${n.date.toLocaleString("en-US", { month: "short" })}${n.approx ? "?" : ""}</small>` : "<span>?</span><small>varies</small>"}</div>
-      <div><div class="name">${esc(p.name)}</div>
+      <div><div class="name">${p.page ? `<a href="/${esc(p.page)}">${esc(p.name)}</a>` : esc(p.name)}</div>
       <div class="meta">${esc(p.venue)}${p.city ? ", " + esc(p.city) : ""} · ${esc(p.county || "")}${state.here ? ` · ${(p._km * 0.621).toFixed(1)} mi` : ""}</div>
       <div class="meta">${esc(line(p))}</div>
       <div class="row">${badge(p)}${p.ages === "all" ? '<span class="tag">All ages</span>' : p.ages && p.ages !== "unknown" ? `<span class="tag">${esc(p.ages)}</span>` : ""}${p.format === "mixed" ? '<span class="tag">Mixed night</span>' : ""}</div>
-      <div class="row"><button class="mini" data-act="show">Show on map</button><button class="mini" data-act="still">Report a problem</button><a class="mini" href="${directions(p)}" target="_blank" rel="noopener">Directions</a>${p.sources && p.sources[0] ? `<a class="mini" href="${esc(p.sources[0].url)}" target="_blank" rel="noopener">Source</a>` : ""}</div>
+      <div class="row"><button class="mini" data-act="show">Show on map</button><button class="mini" data-act="still">Report a problem</button>${p.page ? `<a class="mini" href="/${esc(p.page)}">Details</a>` : ""}<a class="mini" href="${directions(p)}" target="_blank" rel="noopener">Directions</a>${p.sources && p.sources[0] ? `<a class="mini" href="${esc(p.sources[0].url)}" target="_blank" rel="noopener">Source</a>` : ""}</div>
       <div class="still" hidden></div></div>`;
     el.querySelector('[data-act="show"]').addEventListener("click", () => select(p.id, true));
     el.querySelector('[data-act="still"]').addEventListener("click", () => openForm(p.id));
@@ -276,7 +276,7 @@ function select(id, fly) {
   if (fly) map.flyTo({ center: f.geometry.coordinates, zoom: Math.max(map.getZoom(), 13), duration: 600 });
   const p = f.properties;
   new maplibregl.Popup({ offset: 14, maxWidth: "290px" }).setLngLat(f.geometry.coordinates).setHTML(
-    `<b>${esc(p.name)}</b><br>${esc(p.venue)}${p.address ? "<br>" + esc(p.address) : ""}<br>${esc(line(p))}
+    `<b>${p.page ? `<a href="/${esc(p.page)}">${esc(p.name)}</a>` : esc(p.name)}</b><br>${esc(p.venue)}${p.address ? "<br>" + esc(p.address) : ""}<br>${esc(line(p))}
      ${p.signup_time && !p.times_vary ? "<br>Sign-up " + esc(p.signup_time) : ""}${p.slot ? "<br>Slot: " + esc(p.slot) : ""}
      <br>${badge(p)}
      <br>${sourcesHTML(p)}${p.instagram ? ` · <a href="${esc(p.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ""} · <a href="${directions(p)}" target="_blank" rel="noopener">Directions</a> · <a href="?report=${encodeURIComponent(p.id)}" data-report="${esc(p.id)}">Report a problem</a>`).addTo(map);
